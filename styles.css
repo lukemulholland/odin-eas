@@ -1,0 +1,15 @@
+#grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 480px;
+  height: 480px;
+  border: 2px solid black; /* Optional: to see the boundary of the grid container */
+}
+
+#grid div {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  background-color: tomato; /* Add background to make squares visible */
+  box-sizing: border-box;
+}
