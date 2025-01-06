@@ -29,18 +29,13 @@ function createGrid(size) {
     squares.forEach(square => {
         square.style.width = `${squareSize}px`; // Dynamic square size
         square.style.height = `${squareSize}px`; // Dynamic square size
+
+        // Add event listener to each square and change color to black when mouseover
+        square.addEventListener('mouseover', function(e) {
+            e.target.style.backgroundColor = 'black';
+        });
     });
 }
-
-// Select all squares and add event listener to each
-const squares = document.querySelectorAll('#grid div');
-
-// Add event listener to each square and change color to black when mouseover
-squares.forEach(square => {
-    square.addEventListener('mouseover', function(e) {
-        e.target.style.backgroundColor = 'black';
-    });
-});
 
 // Set up reset button
 const resetButton = document.querySelector('#btn-reset');
